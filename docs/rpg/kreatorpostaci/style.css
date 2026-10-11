@@ -1,0 +1,321 @@
+/* ========================================
+   1. KOLORY I USTAWIENIA
+   ======================================== */
+
+:root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --text: #34343b;
+    --text-muted: #777783;
+    --border: #e7e4e8;
+
+    --accent: #8b78bd;
+    --accent-2: #d889a5;
+    --accent-3: #77aaa0;
+
+    --radius: 10px;
+    --content-width: 850px;
+}
+
+/* ========================================
+   2. STRONA I MARGINESY
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 40px 28px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Główna treść */
+body > main,
+body > article,
+body > div,
+main,
+article {
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================
+   3. NAGŁÓWEK H1
+   ======================================== */
+
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.25;
+    font-weight: 750;
+    letter-spacing: -1px;
+    margin: 0 auto 42px;
+    padding: 0 0 22px;
+}
+
+/* Kolorowy pasek pod H1 */
+h1::after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 5px;
+    margin: 20px auto 0;
+    border-radius: 99px;
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-2),
+        var(--accent-3)
+    );
+}
+
+/* ========================================
+   4. MNIEJSZE NAGŁÓWKI
+   ======================================== */
+
+h2 {
+    font-size: 1.65rem;
+    line-height: 1.4;
+    margin-top: 2.5em;
+    margin-bottom: 0.8em;
+    padding: 0.15em 0 0.15em 15px;
+    border-left: 4px solid var(--accent);
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
+    color: #66558e;
+}
+
+h4, h5, h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--text);
+}
+
+/* ========================================
+   5. TEKST I LINKI
+   ======================================== */
+
+p {
+    margin: 0 0 1.2em;
+}
+
+a {
+    color: #7862ae;
+    text-decoration: none;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #bd658b;
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: 700;
+    color: #494052;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    margin: 2.5em 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--accent-2),
+        var(--accent),
+        transparent
+    );
+}
+
+/* ========================================
+   6. LISTY
+   ======================================== */
+
+ul, ol {
+    padding-left: 1.6em;
+    margin: 0 0 1.5em;
+}
+
+li {
+    padding-left: 0.25em;
+    margin-bottom: 0.35em;
+}
+
+li::marker {
+    color: var(--accent);
+}
+
+li > ul,
+li > ol {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+/* ========================================
+   7. CYTATY
+   ======================================== */
+
+blockquote {
+    margin: 1.8em 0;
+    padding: 18px 22px;
+    border-left: 4px solid var(--accent-2);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: #f2edf6;
+    color: #5b5363;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   8. KOD
+   ======================================== */
+
+code {
+    padding: 0.15em 0.4em;
+    border-radius: 5px;
+    background: #efebf2;
+    color: #79588d;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    overflow-x: auto;
+    padding: 20px 22px;
+    margin: 1.5em 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #f1eff4;
+    line-height: 1.6;
+}
+
+pre code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+}
+
+/* ========================================
+   9. TABELE
+   ======================================== */
+
+table {
+    width: 100%;
+    margin: 1.8em 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: #eee8f5;
+    color: #514568;
+    font-weight: 700;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #faf6fc;
+}
+
+/* ========================================
+   10. OBRAZY
+   ======================================== */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.8em auto;
+    border-radius: var(--radius);
+}
+
+figure {
+    margin: 2em 0;
+}
+
+figcaption {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: -1em;
+}
+
+/* ========================================
+   11. CHECKLISTY
+   ======================================== */
+
+input[type="checkbox"] {
+    accent-color: var(--accent);
+    margin-right: 0.5em;
+}
+
+/* ========================================
+   12. ZAZNACZANIE TEKSTU
+   ======================================== */
+
+::selection {
+    color: #fff;
+    background: #9b87c7;
+}
+
+/* ========================================
+   13. TELEFONY I MAŁE EKRANY
+   ======================================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px 17px;
+        font-size: 15px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-top: 2em;
+    }
+
+    pre {
+        padding: 14px;
+    }
+
+    th, td {
+        padding: 9px 10px;
+    }
+}
