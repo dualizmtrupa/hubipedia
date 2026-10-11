@@ -103,10 +103,10 @@ Każda klasa ma talenty, broń i umiejętności/zaklęcia.
 Na klasę przypada również poziom opanowania klasy. 
 
 >[!HELP] Porównanie klas
-Porównanie klas dla lepszego zrozumienia:
-Caster & Ritualist: 
-Alchemist & Artificer (jednorazowe - długotrwałe)
-Ritualist & Zoologist 
+>Porównanie klas dla lepszego zrozumienia:
+>Caster & Ritualist: 
+>Alchemist & Artificer (jednorazowe - długotrwałe)
+>Ritualist & Zoologist 
 
 ### Nieszablonowość
 Jak wpasować to co chcę mieć w jedną z tych klas?
