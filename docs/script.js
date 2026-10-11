@@ -9,6 +9,8 @@ function onClick() {
         return;
     } else if (value === "hubipedia"){
         window.location.replace("hubipedia/")
+    } else if (value === "kreatorrpg"){
+        window.location.replace("rpg/kreatorpostaci/")
     }
 }
 
