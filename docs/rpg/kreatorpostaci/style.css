@@ -310,3 +310,14 @@ input[type="checkbox"] {
         padding: 9px 10px;
     }
 }
+
+body {
+margin: 0 !important;
+padding: 40px 30px !important;
+}
+
+body > * {
+max-width: 900px;
+margin-left: auto !important;
+margin-right: auto !important;
+}
